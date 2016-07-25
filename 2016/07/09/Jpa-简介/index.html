@@ -23,7 +23,7 @@
 . = = 首先得有Spring和Hibernate环境,不再赘述.
 
 第一步 创建一个实体类 MsgMeassage,IdEntity类里面的CreateTime和Id12345678910111213141516171819202122232425@Entity@Table(name = &quot;msg_meassage&quot;)@DynamicInsert(tr">
-<meta property="og:updated_time" content="2016-07-09T09:52:57.688Z">
+<meta property="og:updated_time" content="2016-07-25T09:16:12.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Data Jpa(一)">
 <meta name="twitter:description" content="Spring Jpa Date 基础用法
@@ -57,7 +57,7 @@
 				<h1 class="site-name"><a href="/" title="Teemoer&#39;s blog">Teemoer&#39;s blog</a></h1>
 				<h2 class="blog-motto">让我们一起来捕获你的异常</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -96,14 +96,14 @@
 		<a href="/about" title="Teemoer" target="_blank" itemprop="author">Teemoer</a>
 		
   <p class="article-time">
-    <time datetime="2016-07-09T05:28:53.000Z" itemprop="datePublished"> 发表于 2016-07-09</time>
+    <time datetime="2016-07-09T05:28:53.000Z" itemprop="datePublished"> 發表於 2016-07-09</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">文章目錄</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Jpa-Date-基础用法"><span class="toc-number">1.</span> <span class="toc-text">Spring Jpa Date 基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">1.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">1.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">1.3.</span> <span class="toc-text">第三步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样"><span class="toc-number">1.3.1.</span> <span class="toc-text">比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#SQL代码如下"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">SQL代码如下</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Java-代码这样写-达到同样的功能"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">Java 代码这样写 达到同样的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#怎么样-是不是感觉超屌-我已经习惯这种方式-并且连删除方法都这样做"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">怎么样,是不是感觉超屌?  = =我已经习惯这种方式,并且连删除方法都这样做</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#本文暂时讲解到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">本文暂时讲解到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</span></a></li></ol></li></ol></li></ol></li></ol>
 		
@@ -166,17 +166,17 @@
 	
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">文章目錄</strong>
  
  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Jpa-Date-基础用法"><span class="toc-number">1.</span> <span class="toc-text">Spring Jpa Date 基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">1.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">1.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">1.3.</span> <span class="toc-text">第三步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样"><span class="toc-number">1.3.1.</span> <span class="toc-text">比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#SQL代码如下"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">SQL代码如下</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Java-代码这样写-达到同样的功能"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">Java 代码这样写 达到同样的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#怎么样-是不是感觉超屌-我已经习惯这种方式-并且连删除方法都这样做"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">怎么样,是不是感觉超屌?  = =我已经习惯这种方式,并且连删除方法都这样做</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#本文暂时讲解到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">本文暂时讲解到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</span></a></li></ol></li></ol></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -186,15 +186,15 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/自我/" title="自我">自我<sup>1</sup></a></li>
+				<li><a href="/tags/Spring-Data-Jpa/" title="Spring Data Jpa">Spring Data Jpa<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Spring-Data-Jpa/" title="Spring Data Jpa">Spring Data Jpa<sup>1</sup></a></li>
+				<li><a href="/tags/自我/" title="自我">自我<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -202,7 +202,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -218,7 +218,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
   <div class="weiboshow">
@@ -449,7 +449,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
