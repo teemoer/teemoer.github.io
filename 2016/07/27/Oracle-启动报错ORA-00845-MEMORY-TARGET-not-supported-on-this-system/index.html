@@ -4,35 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>博客刚换HEXO,之前的文章还得慢慢搬呐(T1) | Teemoer&#39;s blog</title>
+    <title>Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system | Teemoer&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Teemoer">
     
 
     
-    <meta name="description" content="平时会不定期分享学习中的心得,互相交流,希望能够为大家提供一点点小心的帮助.
-关于我=  =,同事给的定义是逗逼一个.性格开朗/喜欢编码/见啥都喜欢学 被雷击过几次之后就明白还是先学好JAVA才行.前台的布局是我最讨厌的东西,特别是兼容性的问题.不过对JS方面相关东西很是热爱,哈哈 在我看来JS各种框架的代码写起来摊比后端代码一样爽了.
-喜欢LOL,守望屁股.
-JAVA 方面也是停留在菜鸟级别
-1">
+    <meta name="description" content="启动Oracle报 ORA-00845: MEMORY_TARGET not supported on this system今天晚上新装一台Oracle 11g的数据库，打算将SGA设大一点，知道 11g 中有一个新特新 MEMORY_TARGET，于是尝一下鲜，谁知报了个 ORA-00845，报错比较容易迷惑人，不借助Google真得想半天：1234567891011SQL&amp;gt; alter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客刚换HEXO,之前的文章还得慢慢搬呐(T1)">
-<meta property="og:url" content="http://www.zengwei.me/2016/07/09/我在写测试效果/index.html">
+<meta property="og:title" content="Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system">
+<meta property="og:url" content="http://www.zengwei.me/2016/07/27/Oracle-启动报错ORA-00845-MEMORY-TARGET-not-supported-on-this-system/index.html">
 <meta property="og:site_name" content="Teemoer's blog">
-<meta property="og:description" content="平时会不定期分享学习中的心得,互相交流,希望能够为大家提供一点点小心的帮助.
-关于我=  =,同事给的定义是逗逼一个.性格开朗/喜欢编码/见啥都喜欢学 被雷击过几次之后就明白还是先学好JAVA才行.前台的布局是我最讨厌的东西,特别是兼容性的问题.不过对JS方面相关东西很是热爱,哈哈 在我看来JS各种框架的代码写起来摊比后端代码一样爽了.
-喜欢LOL,守望屁股.
-JAVA 方面也是停留在菜鸟级别
-1">
-<meta property="og:updated_time" content="2016-07-28T19:30:27.895Z">
+<meta property="og:description" content="启动Oracle报 ORA-00845: MEMORY_TARGET not supported on this system今天晚上新装一台Oracle 11g的数据库，打算将SGA设大一点，知道 11g 中有一个新特新 MEMORY_TARGET，于是尝一下鲜，谁知报了个 ORA-00845，报错比较容易迷惑人，不借助Google真得想半天：1234567891011SQL&amp;gt; alter">
+<meta property="og:updated_time" content="2016-07-28T19:34:58.238Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客刚换HEXO,之前的文章还得慢慢搬呐(T1)">
-<meta name="twitter:description" content="平时会不定期分享学习中的心得,互相交流,希望能够为大家提供一点点小心的帮助.
-关于我=  =,同事给的定义是逗逼一个.性格开朗/喜欢编码/见啥都喜欢学 被雷击过几次之后就明白还是先学好JAVA才行.前台的布局是我最讨厌的东西,特别是兼容性的问题.不过对JS方面相关东西很是热爱,哈哈 在我看来JS各种框架的代码写起来摊比后端代码一样爽了.
-喜欢LOL,守望屁股.
-JAVA 方面也是停留在菜鸟级别
-1">
+<meta name="twitter:title" content="Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system">
+<meta name="twitter:description" content="启动Oracle报 ORA-00845: MEMORY_TARGET not supported on this system今天晚上新装一台Oracle 11g的数据库，打算将SGA设大一点，知道 11g 中有一个新特新 MEMORY_TARGET，于是尝一下鲜，谁知报了个 ORA-00845，报错比较容易迷惑人，不借助Google真得想半天：1234567891011SQL&amp;gt; alter">
 
     
     <link rel="alternative" href="/atom.xml" title="Teemoer&#39;s blog" type="application/atom+xml">
@@ -92,14 +80,14 @@ JAVA 方面也是停留在菜鸟级别
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/09/我在写测试效果/" title="博客刚换HEXO,之前的文章还得慢慢搬呐(T1)" itemprop="url">博客刚换HEXO,之前的文章还得慢慢搬呐(T1)</a>
+      <a href="/2016/07/27/Oracle-启动报错ORA-00845-MEMORY-TARGET-not-supported-on-this-system/" title="Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system" itemprop="url">Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Teemoer" target="_blank" itemprop="author">Teemoer</a>
 		
   <p class="article-time">
-    <time datetime="2016-07-08T19:12:21.000Z" itemprop="datePublished"> 发表于 2016-07-09</time>
+    <time datetime="2016-07-27T15:33:32.000Z" itemprop="datePublished"> 发表于 2016-07-27</time>
     
   </p>
 </header>
@@ -108,17 +96,20 @@ JAVA 方面也是停留在菜鸟级别
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于我"><span class="toc-number">1.</span> <span class="toc-text">关于我</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#启动Oracle报-ORA-00845-MEMORY-TARGET-not-supported-on-this-system"><span class="toc-number">1.</span> <span class="toc-text">启动Oracle报 ORA-00845: MEMORY_TARGET not supported on this system</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#错误原因："><span class="toc-number">1.1.</span> <span class="toc-text">错误原因：</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>平时会不定期分享学习中的心得,互相交流,希望能够为大家提供一点点小心的帮助.</p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>=  =,同事给的定义是逗逼一个.性格开朗/喜欢编码/见啥都喜欢学 被雷击过几次<br>之后就明白还是先学好JAVA才行.前台的布局是我最讨厌的东西,特别是兼容性的问<br>题.不过对JS方面相关东西很是热爱,哈哈 在我看来JS各种框架的代码写起来摊比后<br>端代码一样爽了.</p>
-<p>喜欢LOL,守望屁股.</p>
-<p>JAVA 方面也是停留在菜鸟级别</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">xxxxDao.findAll(<span class="keyword">new</span> Specification&lt;Emr&gt;() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> Predicate <span class="title">toPredicate</span><span class="params">(Root&lt;Emr&gt; root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder cb)</span> </span>&#123;</div><div class="line">            List&lt;Predicate&gt; predicates = Lists.newArrayList();</div><div class="line">            <span class="keyword">if</span> (StringUtils.isNotEmpty(patientName)) &#123;</div><div class="line">              <span class="comment">//root.get("patientName").as(String.class) 无需创建 类_</span></div><div class="line">                predicates.add(cb.like(root.get(<span class="string">"patientName"</span>).as(String.class), <span class="string">"%"</span> + patientName + <span class="string">"%"</span>));</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> != dateFilter &amp;&amp; dateFilter.isValid()) &#123;</div><div class="line">                predicates.add(cb.between(root.get(<span class="string">"createOn"</span>).as(Date.class), dateFilter.getStartDate(), dateFilter.getRealEndDate()));</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (Numbers.isNotNullOrZero(doctorId)) &#123;</div><div class="line">                predicates.add(cb.equal(root.get(<span class="string">"doctor"</span>).as(Doctor.class), <span class="keyword">new</span> Doctor(doctorId)));</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> != diagonsisName &amp;&amp; !<span class="string">""</span>.equals(diagonsisName)) &#123;</div><div class="line">              <span class="comment">// 需要创建 类_  </span></div><div class="line">                predicates.add(cb.like(root.get(Emr_.diagnosisResult), <span class="string">"%"</span> + diagonsisName + <span class="string">"%"</span>));</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> != ageFilter &amp;&amp; ageFilter.isValid()) &#123;</div><div class="line">                predicates.add(cb.between(root.get(Emr_.patient).get(Patient_.birthday), ageFilter.getStartDate(), ageFilter.getRealEndDate()));</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> != genderSex &amp;&amp; genderSex != Gender.All) &#123;</div><div class="line">                predicates.add(cb.equal(root.get(Emr_.patient).get(Patient_.gender), genderSex));</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            query.orderBy(cb.desc(root.get(Emr_.createOn)));</div><div class="line"></div><div class="line"></div><div class="line">            <span class="keyword">if</span> (!predicates.isEmpty()) &#123;</div><div class="line">                query.where(cb.and(predicates.toArray(<span class="keyword">new</span> Predicate[predicates.size()])));</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            query.groupBy(root.get(Emr_.patient), root.get(Emr_.doctor));</div><div class="line">            <span class="keyword">return</span> query.getGroupRestriction();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
-<p>不定期更新IDEA的使用心的和JAVA以及JS方面的东西,互相学习.</p>
-<p>Anyway 感谢你进入我的博客.如果我写的任何东西对你有帮助的话,也让我欣慰万分.</p>
+		<h2 id="启动Oracle报-ORA-00845-MEMORY-TARGET-not-supported-on-this-system"><a href="#启动Oracle报-ORA-00845-MEMORY-TARGET-not-supported-on-this-system" class="headerlink" title="启动Oracle报 ORA-00845: MEMORY_TARGET not supported on this system"></a>启动Oracle报 ORA-00845: MEMORY_TARGET not supported on this system</h2><p>今天晚上新装一台Oracle 11g的数据库，打算将SGA设大一点，知道 11g 中有一个新特新 MEMORY_TARGET，于是尝一下鲜，谁知报了个 ORA-00845，报错比较容易迷惑人，不借助Google真得想半天：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">SQL&gt; alter system set memory_max_target=3G scope=spfile ;</div><div class="line">System altered.</div><div class="line">SQL&gt; alter system set memory_target=2G scope=spfile ;</div><div class="line">System altered.</div><div class="line">SQL&gt;</div><div class="line">SQL&gt; shutdown immediate</div><div class="line">Database closed.</div><div class="line">Database dismounted.</div><div class="line">ORACLE instance shut down.</div><div class="line">SQL&gt; startup ;</div><div class="line">ORA-00845: MEMORY_TARGET not supported on this system</div></pre></td></tr></table></figure></p>
+<p>###来自Oracle的官方解析是：</p>
+<blockquote>
+<p>Starting with Oracle Database 11g, the Automatic Memory Management feature requires more shared memory (/dev/shm)and file descriptors. The size of the shared memory should be at least the greater of MEMORY_MAX_TARGET and MEMORY_TARGET for each Oracle instance on the computer. If MEMORY_MAX_TARGET or MEMORY_TARGET is set to a non zero value, and an incorrect size is assigned to the shared memory, it will result in an ORA-00845 error at startup.</p>
+</blockquote>
+<h3 id="错误原因："><a href="#错误原因：" class="headerlink" title="错误原因："></a>错误原因：</h3><p>简单来说就是 MEMORY_MAX_TARGET 的设置不能超过 /dev/shm 的大小：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[oracle@FWDB FWDB]$ df -h | grep shm</div><div class="line">tmpfs 2.0G 0 2.0G 0% /dev/shm</div></pre></td></tr></table></figure></p>
+<p>还真是撞到这个枪口上了,马上把它加大：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@FWDB ~]# cat /etc/fstab | grep tmpfs</div><div class="line">tmpfs /dev/shm tmpfs defaults,size=4G 0 0</div></pre></td></tr></table></figure></p>
+<p>现在可以通过重启使这个配置生效，也可以通过重新挂载来修改其大小：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@FWDB ~]# mount -o remount,size=4G /dev/shm</div><div class="line">[root@FWDB ~]# df -h | grep shm</div><div class="line">tmpfs 4.0G 0 4.0G 0% /dev/shm</div></pre></td></tr></table></figure>
+<p>再次启动数据库，没有报错了:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">su - oracle</div><div class="line">lsnrctl stop</div><div class="line">ps -ef|grep <span class="variable">$ORACLE_SID</span>|grep -v ora_|grep LOCAL=NO|awk <span class="string">'&#123;print $2&#125;'</span>|xargs <span class="built_in">kill</span></div><div class="line">sqlplus / as sysdba</div><div class="line">shutdown immediate</div><div class="line"><span class="built_in">exit</span></div><div class="line">lsnrctl start</div><div class="line">sqlplus / as sysbda</div><div class="line">startup</div></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -127,7 +118,7 @@ JAVA 方面也是停留在菜鸟级别
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/自我/">自我</a>
+  <span></span> <a href="/tags/Oracle/">Oracle</a>
   </div>
 
 </div>
@@ -136,7 +127,7 @@ JAVA 方面也是停留在菜鸟级别
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.zengwei.me/2016/07/09/我在写测试效果/" data-title="博客刚换HEXO,之前的文章还得慢慢搬呐(T1) | Teemoer&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://www.zengwei.me/2016/07/27/Oracle-启动报错ORA-00845-MEMORY-TARGET-not-supported-on-this-system/" data-title="Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system | Teemoer&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -149,21 +140,21 @@ JAVA 方面也是停留在菜鸟级别
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/07/09/Jpa-简介/" title="Spring Data Jpa(一)">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Spring Data Jpa(一)</span>
+
+<div class="next">
+<a href="/2016/07/09/Jpa-简介/"  title="Spring Data Jpa(一)">
+ <strong>下一篇：</strong><br/> 
+ <span>Spring Data Jpa(一)
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comment">
 <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016/07/09/我在写测试效果/" data-title="博客刚换HEXO,之前的文章还得慢慢搬呐(T1)" data-url="http://www.zengwei.me/2016/07/09/我在写测试效果/"></div>
+	<div class="ds-thread" data-thread-key="2016/07/27/Oracle-启动报错ORA-00845-MEMORY-TARGET-not-supported-on-this-system/" data-title="Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system" data-url="http://www.zengwei.me/2016/07/27/Oracle-启动报错ORA-00845-MEMORY-TARGET-not-supported-on-this-system/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -186,7 +177,7 @@ var duoshuoQuery = {short_name:"teemoer"};
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于我"><span class="toc-number">1.</span> <span class="toc-text">关于我</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#启动Oracle报-ORA-00845-MEMORY-TARGET-not-supported-on-this-system"><span class="toc-number">1.</span> <span class="toc-text">启动Oracle报 ORA-00845: MEMORY_TARGET not supported on this system</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#错误原因："><span class="toc-number">1.1.</span> <span class="toc-text">错误原因：</span></a></li></ol></li></ol>
  
   </div>
 

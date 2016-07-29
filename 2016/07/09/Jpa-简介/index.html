@@ -23,7 +23,7 @@
 . = = 首先得有Spring和Hibernate环境,不再赘述.
 
 第一步 创建一个实体类 MsgMeassage,IdEntity类里面的CreateTime和Id12345678910111213141516171819202122232425@Entity@Table(name = &quot;msg_meassage&quot;)@DynamicInsert(tr">
-<meta property="og:updated_time" content="2016-07-25T09:16:12.294Z">
+<meta property="og:updated_time" content="2016-07-28T19:30:27.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Data Jpa(一)">
 <meta name="twitter:description" content="Spring Jpa Date 基础用法
@@ -57,7 +57,7 @@
 				<h1 class="site-name"><a href="/" title="Teemoer&#39;s blog">Teemoer&#39;s blog</a></h1>
 				<h2 class="blog-motto">让我们一起来捕获你的异常</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -96,16 +96,16 @@
 		<a href="/about" title="Teemoer" target="_blank" itemprop="author">Teemoer</a>
 		
   <p class="article-time">
-    <time datetime="2016-07-09T05:28:53.000Z" itemprop="datePublished"> 發表於 2016-07-09</time>
+    <time datetime="2016-07-09T05:28:53.000Z" itemprop="datePublished"> 发表于 2016-07-09</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Jpa-Date-基础用法"><span class="toc-number">1.</span> <span class="toc-text">Spring Jpa Date 基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">1.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">1.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">1.3.</span> <span class="toc-text">第三步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样"><span class="toc-number">1.3.1.</span> <span class="toc-text">比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#SQL代码如下"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">SQL代码如下</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Java-代码这样写-达到同样的功能"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">Java 代码这样写 达到同样的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#怎么样-是不是感觉超屌-我已经习惯这种方式-并且连删除方法都这样做"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">怎么样,是不是感觉超屌?  = =我已经习惯这种方式,并且连删除方法都这样做</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#本文暂时讲解到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">本文暂时讲解到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</span></a></li></ol></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Jpa-Date-基础用法"><span class="toc-number">1.</span> <span class="toc-text">Spring Jpa Date 基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">1.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">1.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">1.3.</span> <span class="toc-text">第三步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样"><span class="toc-number">1.3.1.</span> <span class="toc-text">比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#SQL代码如下"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">SQL代码如下</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Java-代码这样写-达到同样的功能"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">Java 代码这样写 达到同样的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">= = 并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#本文暂时聊到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">本文暂时聊到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</span></a></li></ol></li></ol></li></ol></li></ol>
 		
 		</div>
 		
@@ -117,10 +117,10 @@
 <h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>创建MsgMeassageServiceImpl,然后自动注入 MsgMeassageDao ,接下来我们要查询数据的时候就<br>可以这样写了<br><strong>*</strong> 比如我想查询所有的MsgMeassage,因为JpaRepository封装了很多常用的方法,我们可以直<br>接调用 findAll,findOnd,delete,save 等等常用的方法,列子如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Resource</span></div><div class="line"><span class="keyword">private</span> MsgMeassageDao msgMeassageDao;</div><div class="line"><span class="comment">//直接保存 MsgMeassage 对象</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(MsgMeassage msgMeassage)</span> </span>&#123;</div><div class="line">    msgMeassageDao.save(msgMeassage);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h5 id="比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样"><a href="#比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样" class="headerlink" title="比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:"></a>比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:</h5><h6 id="SQL代码如下"><a href="#SQL代码如下" class="headerlink" title="SQL代码如下"></a>SQL代码如下</h6><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> MsgMeassage ms <span class="keyword">where</span> ms.doctor=XXX</div></pre></td></tr></table></figure>
 <h6 id="Java-代码这样写-达到同样的功能"><a href="#Java-代码这样写-达到同样的功能" class="headerlink" title="Java 代码这样写 达到同样的功能"></a>Java 代码这样写 达到同样的功能</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Resource</span></div><div class="line"><span class="keyword">private</span> MsgMeassageDao msgMeassageDao;</div><div class="line"><span class="function"><span class="keyword">public</span> MsgMeassage <span class="title">getMeassageByDoctor</span><span class="params">(<span class="keyword">final</span> Doctor doctor)</span> </span>&#123;</div><div class="line">      <span class="keyword">return</span> msgMeassageDao.findOne(<span class="keyword">new</span> Specification&lt;MsgMeassage&gt;() &#123;</div><div class="line">          <span class="meta">@Override</span></div><div class="line">          <span class="function"><span class="keyword">public</span> Predicate <span class="title">toPredicate</span><span class="params">(Root&lt;MsgMeassage&gt; root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder cb)</span> </span>&#123;</div><div class="line">              List&lt;Predicate&gt; predicateList = Lists.newArrayList();</div><div class="line">              predicateList.add(cb.equal(root.get(MsgMeassage_.doctor), doctor));</div><div class="line">              <span class="keyword">return</span> cb.and(predicateList.toArray(<span class="keyword">new</span> Predicate[predicateList.size()]));</div><div class="line">          &#125;</div><div class="line">      &#125;);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h6 id="怎么样-是不是感觉超屌-我已经习惯这种方式-并且连删除方法都这样做"><a href="#怎么样-是不是感觉超屌-我已经习惯这种方式-并且连删除方法都这样做" class="headerlink" title="怎么样,是不是感觉超屌?  = =我已经习惯这种方式,并且连删除方法都这样做"></a>怎么样,是不是感觉超屌?  = =我已经习惯这种方式,并且连删除方法都这样做</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delMeassageByDoctor</span><span class="params">(<span class="keyword">final</span> Doctor doctor)</span> </span>&#123;</div><div class="line">      msgMeassageDao.delete(msgMeassageDao.findAll(<span class="keyword">new</span> Specification&lt;MsgMeassage&gt;() &#123;</div><div class="line">          <span class="meta">@Override</span></div><div class="line">          <span class="function"><span class="keyword">public</span> Predicate <span class="title">toPredicate</span><span class="params">(Root&lt;MsgMeassage&gt; root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder cb)</span> </span>&#123;</div><div class="line">              List&lt;Predicate&gt; predicateList = Lists.newArrayList();</div><div class="line">              predicateList.add(cb.equal(root.get(MsgMeassage_.doctor), doctor));</div><div class="line">              <span class="keyword">return</span> cb.and(predicateList.toArray(<span class="keyword">new</span> Predicate[predicateList.size()]));</div><div class="line">          &#125;</div><div class="line">      &#125;));</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<h6 id="本文暂时讲解到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><a href="#本文暂时讲解到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象" class="headerlink" title="本文暂时讲解到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象"></a>本文暂时讲解到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</h6><p>的方式来替换sql.</p>
+<h6 id="并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）"><a href="#并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）" class="headerlink" title="= = 并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）"></a>= = 并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delMeassageByDoctor</span><span class="params">(<span class="keyword">final</span> Doctor doctor)</span> </span>&#123;</div><div class="line">      msgMeassageDao.delete(msgMeassageDao.findAll(<span class="keyword">new</span> Specification&lt;MsgMeassage&gt;() &#123;</div><div class="line">          <span class="meta">@Override</span></div><div class="line">          <span class="function"><span class="keyword">public</span> Predicate <span class="title">toPredicate</span><span class="params">(Root&lt;MsgMeassage&gt; root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder cb)</span> </span>&#123;</div><div class="line">              List&lt;Predicate&gt; predicateList = Lists.newArrayList();</div><div class="line">              predicateList.add(cb.equal(root.get(MsgMeassage_.doctor), doctor));</div><div class="line">              <span class="keyword">return</span> cb.and(predicateList.toArray(<span class="keyword">new</span> Predicate[predicateList.size()]));</div><div class="line">          &#125;</div><div class="line">      &#125;));</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h6 id="本文暂时聊到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><a href="#本文暂时聊到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象" class="headerlink" title="本文暂时聊到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象"></a>本文暂时聊到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</h6><p>的方式来替换sql.</p>
 <blockquote>
-<p>= = 如果这篇文章对你有一点点帮助的话,可以向你的小伙伴推荐哦 !</p>
+<p>= = 2333</p>
 </blockquote>
   
 	</div>
@@ -152,11 +152,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/07/27/Oracle-启动报错ORA-00845-MEMORY-TARGET-not-supported-on-this-system/" title="Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Oracle 启动报错ORA-00845: MEMORY_TARGET not supported on this system</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2016/07/09/我在写测试效果/"  title="博客刚换HEXO,之前的文章还得慢慢搬呐">
+<a href="/2016/07/09/我在写测试效果/"  title="博客刚换HEXO,之前的文章还得慢慢搬呐(T1)">
  <strong>下一篇：</strong><br/> 
- <span>博客刚换HEXO,之前的文章还得慢慢搬呐
+ <span>博客刚换HEXO,之前的文章还得慢慢搬呐(T1)
 </span>
 </a>
 </div>
@@ -164,19 +172,37 @@
 </nav>
 
 	
+<section id="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016/07/09/Jpa-简介/" data-title="Spring Data Jpa(一)" data-url="http://www.zengwei.me/2016/07/09/Jpa-简介/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"teemoer"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+</section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Jpa-Date-基础用法"><span class="toc-number">1.</span> <span class="toc-text">Spring Jpa Date 基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">1.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">1.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">1.3.</span> <span class="toc-text">第三步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样"><span class="toc-number">1.3.1.</span> <span class="toc-text">比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#SQL代码如下"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">SQL代码如下</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Java-代码这样写-达到同样的功能"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">Java 代码这样写 达到同样的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#怎么样-是不是感觉超屌-我已经习惯这种方式-并且连删除方法都这样做"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">怎么样,是不是感觉超屌?  = =我已经习惯这种方式,并且连删除方法都这样做</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#本文暂时讲解到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">本文暂时讲解到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</span></a></li></ol></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Jpa-Date-基础用法"><span class="toc-number">1.</span> <span class="toc-text">Spring Jpa Date 基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步"><span class="toc-number">1.1.</span> <span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步"><span class="toc-number">1.2.</span> <span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步"><span class="toc-number">1.3.</span> <span class="toc-text">第三步</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#比如我想加入条件查询-比如-查询某一个医生的MsgMeassage就可以这样"><span class="toc-number">1.3.1.</span> <span class="toc-text">比如我想加入条件查询,比如 查询某一个医生的MsgMeassage就可以这样:</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#SQL代码如下"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">SQL代码如下</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Java-代码这样写-达到同样的功能"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">Java 代码这样写 达到同样的功能</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">= = 并且连删除方法都可以这样做（反面教材，很影响性能，千万别这么干）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#本文暂时聊到这里-下一次更新-会详细说明下-怎么使用-Specification-来-用面向对象"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">本文暂时聊到这里 下一次更新 会详细说明下 怎么使用 Specification 来 用面向对象</span></a></li></ol></li></ol></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -186,11 +212,15 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
 				<li><a href="/tags/Spring-Data-Jpa/" title="Spring Data Jpa">Spring Data Jpa<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Oracle/" title="Oracle">Oracle<sup>1</sup></a></li>
 			
 		
 			
@@ -202,7 +232,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -218,7 +248,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   <div class="weiboshow">
@@ -449,7 +479,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
